@@ -54,9 +54,9 @@ This will download all the necessary files which are required to integrate the `
 
 ---
 
-## Create and start a chat  
+## Create and start a basic chat 
 
-Follow the next steps to create and start a chat.
+Follow the next steps to have a basic working chat integrated to your App.
 
 ## Create new Project  
 
@@ -76,7 +76,26 @@ Go to the desired file (e.g., `ViewController.swift`) and add the line below:
 import GenesysCloud
 ```
 
-### Setup Messenger Chat
+### Create Chat Account
+
+Create a `MessengerAccount` and configure it with a predefined [`Messenger Deployment`](https://help.mypurecloud.com/articles/deploy-messenger/) details.
+
+```swift
+    let meesengerAccount = MessengerAccount()
+    meesengerAccount.deploymentId = {DEPLOYMENT_ID}
+    meesengerAccount.domain = {DOMAIN}
+    meesengerAccount.tokenStoreKey = {TOKEN_STORE_KEY}
+```
+
+### Create ChatController instance
+
+The `ChatController` is the interaction point with the SDK. You need it to create a chat.
+
+```swift
+    var chatController =  ChatController(account: meesengerAccount)
+```
+
+###  `ViewController` Should Look as Below
 
 ```swift
 class ViewController: UIViewController {
@@ -101,7 +120,7 @@ class ViewController: UIViewController {
 }
 ```
 
-### Add Chat View Controller by Implementing Delegate Methods  
+### Display Chat View Controller by Implementing Delegate Methods  
 
 ```swift
 extension ViewController: ChatControllerDelegate {
@@ -116,8 +135,7 @@ extension ViewController: ChatControllerDelegate {
         print(error.error.debugDescription);
     }
 }
-```
-    
+```  
 
 ---
 
