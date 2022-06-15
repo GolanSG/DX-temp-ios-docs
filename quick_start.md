@@ -8,47 +8,50 @@ Use this Quick start guide to set up a working chat hosted by your App.
 
 `platform :ios, '11.0'`
 
+### Required resources:
+
 * Automatic Reference Counting (ARC) is required in your project.
 * [CocoaPods](https://guides.cocoapods.org/using/getting-started.html).
 
 
 ## Set up the SDK on your App.
-Note: Using CocoaPods on an existing Xcode project will modify the project file, so you may want to make a backup before doing this.
 
-1. Create a Podfile in the root directory of your project.
+Note: If you use CocoaPods on an existing Xcode project, it modifies the project file, so you may want to make a backup before doing this.
+
+1 . Create a Podfile in the root directory of your project.
 
 ```sh
 $ pod init
 ```
 
-2. Add Official CocoaPods PodSpecs repository to your Podfile:
+2 . Add Official CocoaPods PodSpecs repository to your Podfile:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
 ```
 
-3. Add `GenesysCloud` PodSpecs repository to your Podfile:
+3 . Add `GenesysCloud` PodSpecs repository to your Podfile:
 
->Note: below souce points to our pre released environment.
+>Note: Find the the source points to our pre-released environment below.
 
 ```ruby
 source 'https://github.com/genesys/dx-sdk-specs-dev'
 ```
 
-4. Add `GenesysCloud` iOS SDK to your Podfile:
+4 . Add `GenesysCloud` iOS SDK to your Podfile:
     
 ```ruby
 pod 'GenesysCloud'
 ```
 
-5. Using *terminal*, with your project root directory as the *working path*, run:
+5 . Using *terminal*, with your project root directory as the *working path*, run:
 
 ```ruby
 pod install
-# pod update GenesysCloud (use this when you want to get new released version).
+# pod update GenesysCloud (use this if you want to get the newly released version).
 ```
 
-This will download all the necessary files which are required to integrate the `GenesysCloud` into your project.
+This action downloads all the necessary files which are required to integrate the `GenesysCloud` into your project.
 
 > ! Now you are ready to integrate and create some chats.
 
@@ -62,11 +65,11 @@ Follow the next steps to have a basic working chat integrated to your App.
 
 ### Set Up a Project in Xcode  
 
-1. Open Xcode and click **start new Xcode Project**.
+1 . Open Xcode and click **start new Xcode Project**.
 
-2. Next, select **Single View Application** and click **Next**.
+2 . Next, select **Single View Application** and click **Next**.
 
-3. In the dialog screen displayed, enter the relevant details.
+3 . In the dialog screen displayed, enter the relevant details.
 
 ### Import SDK
 
@@ -95,7 +98,7 @@ The `ChatController` is the interaction point with the SDK. You need it to creat
     var chatController =  ChatController(account: meesengerAccount)
 ```
 
-###  `ViewController` Should Look as Below
+###  The `ViewController`should look as below.
 
 ```swift
 class ViewController: UIViewController {
