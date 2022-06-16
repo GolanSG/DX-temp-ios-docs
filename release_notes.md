@@ -1,5 +1,5 @@
 
-# iOS Chat SDK Release Notes
+# iOS Messenger SDK Release Notes
 
 
 <details open markdown="block">
@@ -12,20 +12,20 @@ ___
 
 ### What's new 
 
-- Chat configurations maintenance improvements. Separated logic settings from UI related configurations.
+- Messenger configurations maintenance improvements. Separated logic settings from UI related configurations.
 - Loaded messenger chat configurations and applied basic UI configurations on displayed messages.
 - Messenger chat engine creation and support.
 - Integration with Transport SDK version 1.2.1.
 
 ### Breaking changes
-- ChatHandler manages the chat configurations with `ConfigurationRepository`.
-- Accessing Transport SDK from new Messenger SDK and not directly from `MessengerHandler`.
+- From now on, `ChatHandler` manages the messenger configurations with `ConfigurationRepository`.
+- Transport SDK is now accessed from new `GenesysCloudMessengerSDK` and not directly from `MessengerHandler`.
 
 ---
 
 ### Dependencies 
 
-👉 To get latest version:
+👉 To get the latest version:
 
 - Update Podfile with:
 
@@ -53,16 +53,16 @@ pod update
 Release date: 20 Feb 2022
 
 ### What's new 
-- Static links remove and pointing to public cocoapods spec.
+- Removed static links and linked to public CocoaPods specifications.
 - UI layer was moved into container.
 - Integration with Transport SDK version 1.1.14.
-- Error Handling Optimizations.
+- Optimized Error Handling.
 
 --- 
 
 ### Dependencies 
 
-👉 To get latest version:
+👉 To get the latest version:
 
 - Update Podfile with:
 
@@ -90,17 +90,17 @@ pod update
 Release date: 18 Feb 2022
 
 ### What's new 
-- Full bitcode support support.
-- Initial chat creation. 
+- Full bitcode support.
+- Initial messenger creation. 
 
 ### Breaking Changes
-- Modules namespacing and packages were renamed with `GenesysCloud` prefix.
+- Namespacing modules and packages were renamed with `GenesysCloud` prefix.
 
 ---
 
 ### Dependencies 
 
-👉 To get latest version:
+👉 To get the latest version:
 
 - Update Podfile with:
 

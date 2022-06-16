@@ -4,7 +4,7 @@ Use this Quick start guide to set up a working chat hosted by your App.
 
 ## System Requirements  
 
-* [iOS 11 and above](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewIniOS/Articles/iOS10.html#//apple_ref/doc/uid/TP40017084-SW1)
+* [iOS 11 and above](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewIniOS/Articles/iOS_11_0.html#//apple_ref/doc/uid/TP40017637-SW1)
 
 `platform :ios, '11.0'`
 
